@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Board Application</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1 class="logo">JobBoard</h1>
+    <button class="toggle-btn" onclick="toggleTheme()">🌙</button>
+  </nav>
+
+  <!-- Search -->
+  <section class="search-section">
+    <input type="text" id="searchInput" placeholder="Search jobs..." />
+    <button onclick="searchJobs()">Search</button>
+  </section>
+
+  <!-- Job Post Form -->
+  <section class="form-section">
+    <h2>Post a Job</h2>
+    <form id="jobForm">
+      <input type="text" id="jobTitle" placeholder="Job Title" required />
+      <input type="text" id="company" placeholder="Company Name" required />
+      <textarea id="description" placeholder="Job Description" required></textarea>
+      <button type="submit">Post Job</button>
+    </form>
+  </section>
+
+  <!-- Job Seeker Profile -->
+  <section class="form-section">
+    <h2>Create Profile</h2>
+    <form id="profileForm">
+      <input type="text" id="seekerName" placeholder="Your Name" required />
+      <input type="text" id="skills" placeholder="Your Skills (comma separated)" required />
+      <button type="submit">Save Profile</button>
+    </form>
+  </section>
+
+  <!-- My Profile Section -->
+  <section class="profile-display">
+    <h2>My Profile</h2>
+    <div id="profileCard" class="profile-card">
+      <p>No profile created yet.</p>
+    </div>
+  </section>
+
+  <!-- Job Listings -->
+  <section class="jobs-section">
+    <h2>Available Jobs</h2>
+    <div id="jobList" class="job-list"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
